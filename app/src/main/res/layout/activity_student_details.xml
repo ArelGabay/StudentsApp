@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="phone"
+        android:text="Phone"
         app:layout_constraintBottom_toTopOf="@+id/activity_student_details_address_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_student_details_name_text_view" />
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="address"
+        android:text="Address"
         app:layout_constraintBottom_toTopOf="@+id/activity_student_details_check_box_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_student_details_phone_text_view" />

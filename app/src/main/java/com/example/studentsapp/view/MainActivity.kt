@@ -2,6 +2,7 @@ package com.example.studentsapp.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studentsapp.R
 import com.example.studentsapp.model.Student
+import com.example.studentsapp.repository.StudentRepository
 import com.example.studentsapp.viewmodel.StudentViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +39,12 @@ class MainActivity : AppCompatActivity() {
             onCheckClick = { student -> viewModel.updateStudent(student) }
         )
 
+        val addButton = findViewById<Button>(R.id.main_activity_add_student_button)
+        addButton.setOnClickListener {
+            val intent = Intent(this, AddStudentActivity::class.java)
+            startActivity(intent)
+        }
+
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -48,6 +56,12 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, StudentDetailsActivity::class.java)
         intent.putExtra("studentId", student.id) // Pass the student ID
         startActivity(intent)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Refresh the list after returning from AddStudentActivity
+        adapter.updateData(viewModel.getAllStudents())
     }
 
     private fun addMockData() {
