@@ -18,43 +18,58 @@
         android:id="@+id/activity_student_details_id_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="ID"
         app:layout_constraintBottom_toTopOf="@+id/activity_student_details_name_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="53dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/activity_student_details_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/activity_student_details_phone_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_id_text_view"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_id_text_view" />
 
     <TextView
         android:id="@+id/activity_student_details_phone_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="phone"
         app:layout_constraintBottom_toTopOf="@+id/activity_student_details_address_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_name_text_view"
-        tools:layout_editor_absoluteX="105dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_name_text_view" />
 
     <TextView
         android:id="@+id/activity_student_details_address_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="address"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_phone_text_view"
-        tools:layout_editor_absoluteX="214dp" />
+        app:layout_constraintBottom_toTopOf="@+id/activity_student_details_check_box_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_phone_text_view" />
 
     <CheckBox
         android:id="@+id/activity_student_details_check_box_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_student_details_edit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_address_text_view" />
+
+    <Button
+        android:id="@+id/activity_student_details_edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Edit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activity_student_details_address_text_view"
-        tools:layout_editor_absoluteX="290dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
