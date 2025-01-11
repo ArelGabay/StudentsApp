@@ -79,7 +79,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="ID"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_add_student_id_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -90,7 +89,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_add_student_name_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -101,7 +99,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_add_student_phone_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -112,7 +109,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Address"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_add_student_address_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 

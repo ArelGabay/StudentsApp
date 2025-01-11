@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-        android:text="cancel"
+        android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -104,7 +104,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="ID"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_id_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -115,7 +114,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_name_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -126,7 +124,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_phone_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -137,7 +134,6 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Address"
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_address_text_view"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

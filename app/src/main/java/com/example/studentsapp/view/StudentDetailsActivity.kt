@@ -3,6 +3,7 @@ package com.example.studentsapp.view
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
@@ -34,11 +35,16 @@ class StudentDetailsActivity : AppCompatActivity() {
 
         loadStudentDetails()
 
-        val editButton = findViewById<TextView>(R.id.activity_student_details_edit_button)
+        val editButton = findViewById<Button>(R.id.activity_student_details_edit_button)
         editButton.setOnClickListener {
             val intent = Intent(this, EditStudentActivity::class.java)
             intent.putExtra("studentId", studentId)
             editStudentLauncher.launch(intent)
+        }
+
+        val backButton = findViewById<Button>(R.id.activity_student_details_back_button)
+        backButton.setOnClickListener {
+            finish()
         }
 
     }
