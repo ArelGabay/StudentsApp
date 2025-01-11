@@ -24,4 +24,8 @@ class StudentViewModel{
         StudentRepository.deleteStudent(student)
     }
 
+    fun sortStudentsByName() {
+        StudentRepository.sortStudentsByName()
+    }
+
 }

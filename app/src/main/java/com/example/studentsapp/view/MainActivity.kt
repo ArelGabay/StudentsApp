@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         // Refresh the list after returning from AddStudentActivity
+        viewModel.sortStudentsByName()
         adapter.updateData(viewModel.getAllStudents())
     }
 
@@ -81,6 +82,7 @@ class MainActivity : AppCompatActivity() {
                 address = "456 Elm Street, Springfield"
             )
         )
+        viewModel.sortStudentsByName()
         adapter.updateData(viewModel.getAllStudents()) // Refresh RecyclerView with new data
     }
 

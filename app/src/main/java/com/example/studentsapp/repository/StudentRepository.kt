@@ -24,6 +24,10 @@ object StudentRepository {
 
     // Delete a student
     fun deleteStudent(student: Student) {
-        students.remove(student)
+        students.removeAll { it.id == student.id } // Remove the student with the matching ID
+    }
+
+    fun sortStudentsByName() {
+        students.sortBy { it.name }
     }
 }
