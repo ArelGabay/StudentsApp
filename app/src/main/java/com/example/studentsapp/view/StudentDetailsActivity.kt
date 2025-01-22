@@ -21,9 +21,16 @@ class StudentDetailsActivity : AppCompatActivity() {
     // Activity Result Launcher for EditStudentActivity
     private val editStudentLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
-            // Update studentId with the new ID from the EditStudentActivity result
-            studentId = result.data?.getStringExtra("newStudentId") ?: studentId
-            loadStudentDetails() // Refresh details with the new ID
+            val isDeleted = result.data?.getBooleanExtra("deleted", false) ?: false
+
+            if (isDeleted) {
+                // If the student was deleted, close this activity
+                finish()
+            } else {
+                // If not deleted, check for an updated student ID
+                studentId = result.data?.getStringExtra("newStudentId") ?: studentId
+                loadStudentDetails() // Refresh details with the new ID
+            }
         }
     }
 
