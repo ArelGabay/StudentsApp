@@ -93,9 +93,14 @@ class EditStudentActivity : AppCompatActivity() {
         // Handle Delete button click
         deleteButton.setOnClickListener {
             if (student != null) {
-                viewModel.deleteStudent(student) // Remove from repository
+                viewModel.deleteStudent(student) // Remove the student from the repository
+
+                // Set the result to notify the caller that the student was deleted
+                val resultIntent = Intent()
+                resultIntent.putExtra("deleted", true) // Add a flag for deletion
+                setResult(RESULT_OK, resultIntent)
             }
-            finish() // Close the activity and return to the main screen
+            finish() // Close the Edit Screen
         }
 
     }
